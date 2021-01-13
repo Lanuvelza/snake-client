@@ -28,6 +28,8 @@ const handleUserInput = function() {
       connection.write("Move: right");
     } else if (key === "s") {
       connection.write("Move: down");
+    } else if (key === "p") {
+      connection.write("Say: POGGERS");
     }
   });
 }
