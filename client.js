@@ -7,6 +7,14 @@ const connect = function() {
     host: 'localhost',
     port: 50541
   });
+
+  // print a message to the screen when the connection is successfully established 
+  // send a name which we will assign the snake 
+  conn.on('connect', () => {
+    console.log("connection is successfully established");
+    conn.write("Name: ILM"); 
+  }); 
+
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
 
