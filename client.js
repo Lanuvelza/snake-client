@@ -13,6 +13,23 @@ const connect = function() {
   conn.on('connect', () => {
     console.log("connection is successfully established");
     conn.write("Name: ILM"); 
+    // conn.write("Move: up");
+    // conn.write("Move: down");
+    // conn.write("Move: left");
+    // conn.write("Move: right");
+   
+    // conn.on('connect', () => {
+    //   conn.write("Move: up");
+    //   conn.on('connect', () => {
+    //     conn.write("Move: down");
+    //     conn.on('connect', () => {
+    //       conn.write("Move: left");
+    //       conn.on('connect', () => {
+    //         conn.write("Move: right");
+    //       });
+    //     });
+    //   });
+    // });
   }); 
 
   // interpret incoming data as text
@@ -21,6 +38,8 @@ const connect = function() {
   conn.on('data', (data) => {
     console.log("Message from server: ", data);
   });
+
+  
 
   return conn;
 }
